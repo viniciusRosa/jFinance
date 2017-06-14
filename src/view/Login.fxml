@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.LoginController">
+   <children>
+      <VBox layoutX="14.0" layoutY="94.0" prefHeight="77.0" prefWidth="273.0">
+         <children>
+            <Label text="Email:" />
+            <TextField fx:id="fieldEmail" prefHeight="25.0" prefWidth="207.0" />
+            <Label text="Senha:" />
+            <PasswordField fx:id="fieldPassword" onAction="#actionlogin" />
+         </children>
+      </VBox>
+      <Button fx:id="buttonLogin" layoutX="14.0" layoutY="183.0" mnemonicParsing="false" onAction="#actionlogin" style="-fx-background-color: green;" text="Entrar" textFill="WHITE" />
+      <Button fx:id="buttonNew" layoutX="88.0" layoutY="183.0" mnemonicParsing="false" onAction="#actionlogin" prefHeight="25.0" prefWidth="198.0" style="-fx-background-color: #1E90FF;" text="Novo Cadastro" textFill="WHITE" />
+      <Separator layoutX="15.0" layoutY="218.0" prefHeight="3.0" prefWidth="273.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="26.0" layoutY="6.0" prefHeight="42.0" prefWidth="255.0" text="jFinances" textAlignment="CENTER" visible="false">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelerror" layoutX="15.0" layoutY="77.0" text="Email ou senha incorreta" textFill="#c30a0a" visible="false" />
+      <Button fx:id="facebookLogin" layoutX="13.0" layoutY="231.0" mnemonicParsing="false" onAction="#actionlogin" prefHeight="48.0" prefWidth="255.0">
+         <graphic>
+            <ImageView fitHeight="79.0" fitWidth="273.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+               <image>
+                  <Image url="@../images/facebook.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <padding>
+            <Insets bottom="-20.0" top="-20.0" />
+         </padding>
+      </Button>
+      <ImageView fitHeight="69.0" fitWidth="188.0" layoutX="50.0" layoutY="14.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../images/jfinances.png" />
+         </image>
+      </ImageView>
+    
+   </children>
+</AnchorPane>

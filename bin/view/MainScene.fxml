@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainSceneController">
+   <children>
+      <MenuBar prefHeight="29.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Resumo">
+               <items>
+                  <MenuItem fx:id="btnResume" mnemonicParsing="false" onAction="#actionButton" text="Resumo" />
+               </items></Menu>
+          <Menu mnemonicParsing="false" text="Cadastro">
+            <items>
+              <MenuItem fx:id="btnCredit" mnemonicParsing="false" onAction="#actionButton" text="Credito" />
+                  <MenuItem fx:id="btnDebit" mnemonicParsing="false" onAction="#actionButton" text="Debito" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <MenuBar layoutX="600.0" prefHeight="29.0" prefWidth="152.0">
+        <menus>
+          <Menu fx:id="menuName" mnemonicParsing="false">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="btnSair" />
+               </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane fx:id="resumePane" layoutX="9.0" layoutY="36.0" prefHeight="490.0" prefWidth="730.0">
+         <children>
+            <Label layoutX="327.0" layoutY="14.0" text="Olá">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+            <Label fx:id="labelNameUser" layoutX="365.0" layoutY="14.0" text="Label">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="310.0" layoutY="124.0" text="Bem Vindo ao">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="193.0" fitWidth="415.0" layoutX="149.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/jfinances.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

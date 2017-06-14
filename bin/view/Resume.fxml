@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ResumeController">
+   <children>
+      <Rectangle fill="WHITE" height="438.0" layoutX="247.0" layoutY="49.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="483.0" />
+      <Rectangle fill="WHITE" height="438.0" layoutX="13.0" layoutY="49.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="226.0" />
+      <Rectangle fill="#d0d0d0" height="37.0" layoutX="9.0" layoutY="224.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="233.0" />
+      <Label layoutX="24.0" layoutY="14.0" text="Resumo" />
+      <Separator layoutX="14.0" layoutY="34.0" prefHeight="15.0" prefWidth="703.0" />
+      <TableView fx:id="tableCredit" layoutX="256.0" layoutY="124.0" prefHeight="148.0" prefWidth="463.0">
+        <columns>
+          <TableColumn fx:id="creditName" prefWidth="159.0" text="Nome" />
+          <TableColumn fx:id="creditAvailable" prefWidth="164.0" text="Disponibilidade" />
+            <TableColumn fx:id="creditValue" prefWidth="148.0" text="Valor" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tableDebit" layoutX="256.0" layoutY="326.0" prefHeight="154.0" prefWidth="463.0">
+         <columns>
+            <TableColumn fx:id="debitName" prefWidth="159.0" text="Nome" />
+            <TableColumn fx:id="debitMaturity" prefWidth="164.0" text="Vencimento" />
+            <TableColumn fx:id="debitValue" prefWidth="148.0" text="Valor" />
+         </columns>
+      </TableView>
+      <Label layoutX="266.0" layoutY="59.0" text="Buscar registros(por data):" />
+      <TextField fx:id="txtCredit" layoutX="436.0" layoutY="84.0" prefHeight="25.0" prefWidth="176.0" promptText="dd/mm/aaaa" />
+      <Button fx:id="btnCredit" layoutX="636.0" layoutY="84.0" mnemonicParsing="false" onAction="#actionButton" text="Pesquisar" />
+      <Button fx:id="btnDebit" layoutX="636.0" layoutY="290.0" mnemonicParsing="false" onAction="#actionButton" text="Pesquisar" />
+      <TextField fx:id="txtDebit" layoutX="436.0" layoutY="290.0" prefHeight="25.0" prefWidth="176.0" promptText="dd/mm/aaaa" />
+      <Label layoutX="13.0" layoutY="59.0" text="Total de creditos" />
+      <Label fx:id="txtSaldoCredit" contentDisplay="CENTER" layoutX="13.0" layoutY="89.0" text="Label" textFill="#17c314" />
+      <Label layoutX="10.0" layoutY="132.0" text="Total de debitos" />
+      <Label fx:id="txtSaldoDebit" layoutX="13.0" layoutY="170.0" text="Label" textFill="#e80f0f" />
+      <Separator layoutX="8.0" layoutY="83.0" prefHeight="3.0" prefWidth="233.0" />
+      <Separator layoutX="10.0" layoutY="159.0" prefHeight="3.0" prefWidth="226.0" />
+      <Label layoutX="24.0" layoutY="235.0" text="Saldo:" />
+      <Label fx:id="txtTotal" layoutX="89.0" layoutY="235.0" text="Label" />
+   </children>
+</AnchorPane>

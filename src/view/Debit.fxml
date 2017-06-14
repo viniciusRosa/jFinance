@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.DebitController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff6f6f" height="30.0" layoutX="451.0" layoutY="418.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="275.0" />
+      <Label layoutX="463.0" layoutY="426.0" text="Total de Debitos:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="10.0" layoutY="11.0" text="Cadastro de debito" />
+      <Separator layoutX="10.0" layoutY="35.0" prefHeight="0.0" prefWidth="730.0" />
+      <HBox layoutY="49.0" prefHeight="48.0" prefWidth="730.0">
+         <children>
+            <VBox prefHeight="100.0" prefWidth="137.0">
+               <children>
+                  <Label text="Nome" />
+                  <TextField fx:id="txtName" />
+               </children>
+            </VBox>
+            <VBox prefHeight="44.0" prefWidth="314.0">
+               <children>
+                  <Label text="Descriçao" />
+                  <TextField fx:id="txtDescription" />
+               </children>
+            </VBox>
+            <VBox prefHeight="100.0" prefWidth="133.0">
+               <children>
+                  <Label text="Vencimento" />
+                  <TextField fx:id="txtMaturity" />
+               </children>
+            </VBox>
+            <VBox prefHeight="100.0" prefWidth="147.0">
+               <children>
+                  <Label text="Valor" />
+                  <TextField fx:id="txtValue" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button fx:id="btnClear" layoutX="456.0" layoutY="99.0" mnemonicParsing="false" onAction="#buttonEvent" prefHeight="25.0" prefWidth="133.0" text="Limpar campos" />
+      <TableView fx:id="tableDebit" layoutY="133.0" prefHeight="279.0" prefWidth="730.0">
+         <columns>
+            <TableColumn fx:id="columnName" prefWidth="136.0" text="Nome" />
+            <TableColumn fx:id="columnDescription" prefWidth="314.0" text="Descriçao" />
+            <TableColumn fx:id="columnMaturity" prefWidth="132.0" text="Disponibilidade" />
+            <TableColumn fx:id="columnValue" minWidth="0.0" prefWidth="147.0" text="Valor" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnDelete" layoutX="596.0" layoutY="456.0" mnemonicParsing="false" onAction="#buttonEvent" prefHeight="25.0" prefWidth="133.0" text="Deletar" />
+      <Button fx:id="btnEdit" layoutX="456.0" layoutY="456.0" mnemonicParsing="false" onAction="#buttonEvent" prefHeight="25.0" prefWidth="133.0" text="Editar" />
+      <Button fx:id="btnConfirm" layoutX="593.0" layoutY="99.0" mnemonicParsing="false" onAction="#buttonEvent" prefHeight="25.0" prefWidth="133.0" text="Confirmar" />
+      <Button fx:id="btnUpdate" layoutX="593.0" layoutY="99.0" mnemonicParsing="false" onAction="#buttonEvent" prefHeight="25.0" prefWidth="133.0" text="Atualizar" visible="false" />
+      <Button fx:id="btnCancel" layoutX="456.0" layoutY="99.0" mnemonicParsing="false" onAction="#buttonEvent" prefHeight="25.0" prefWidth="133.0" text="Cancelar" visible="false" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4ffeb" height="25.0" layoutX="604.0" layoutY="420.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="119.0" />
+      <Label fx:id="labelTotal" alignment="TOP_RIGHT" layoutX="597.0" layoutY="426.0" prefHeight="16.0" prefWidth="119.0" text="0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
