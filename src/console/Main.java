@@ -9,7 +9,7 @@ import repository.RepositoryCredit;
 import repository.RepositoryUser;
 
 public class Main {
-//alterei
+
 	public static void main(String[] args){
 		ControllerNewUser nu = new ControllerNewUser();
 		
